@@ -46,7 +46,9 @@ public class WizardController {
         out.addAttribute("wizard", wizard);
         out.addAttribute("allCourses", courseRepository.findAll());
 
-        // call the method getCourses in Wizard
+     // appelle la méthode getCourses dans Wizard
+        
+     
         List<Course> courses = new ArrayList<>();
         Method method = getMethod(wizard, "getCourses",
                 new Class[]{});
@@ -74,7 +76,7 @@ public class WizardController {
             if (optionalCourse.isPresent()) {
                 Course course = optionalCourse.get();
 
-                // call the method getCourses in Wizard
+                // appelle la méthode getCourses dans Wizard
                 List<Course> courses;
                 Method method = getMethod(wizard, "getCourses",
                         new Class[]{});
